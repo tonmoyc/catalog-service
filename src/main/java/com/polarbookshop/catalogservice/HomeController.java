@@ -6,9 +6,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
+    private final PolarProperties polarProperties;
+
+    public HomeController(PolarProperties polarProperties) {
+        this.polarProperties = polarProperties;
+    }
+
     @GetMapping("/")
-    public String getGreting() {
-        return "Welcome to the book catalog!";
+    public String getGreeting() {
+        return polarProperties.getGreeting();
     }
 
 }
