@@ -1,0 +1,7 @@
+polar:
+  greeting: "Welcome to the test data catalog! We have sample books loaded."
+
+# Profile-specific configuration
+logging:
+  level:
+    com.polarbookshop.catalogservice: DEBUG
